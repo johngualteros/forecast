@@ -9,7 +9,7 @@
 
 <div class="options">
     @for (option of weatherForecastOptions; track $index) {
-        <div class="option">
+        <div class="option" [routerLink]="['/weather', option.acronym]">
             {{ option.name }}
 
             <p class="badge">

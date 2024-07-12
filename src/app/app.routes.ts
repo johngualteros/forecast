@@ -1,6 +1,9 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './presentation/home/home.component';
 
+// routes
+import { routes as weatherRoutes } from './presentation/weather/weather.routes';
+
 export const routes: Routes = [
     {
         path: '',
@@ -10,5 +13,10 @@ export const routes: Routes = [
     {
         path: 'home',
         component: HomeComponent
+    },
+    ...weatherRoutes,
+    {
+        path: '**',
+        redirectTo: 'home'
     }
 ];
