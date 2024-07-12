@@ -1,1 +1,14 @@
+<a 
+    routerLink="/"
+    class="go-back"
+>Go back</a>
+
 <h1>{{ name }} ({{acronym}})</h1>
+
+<div class="chart">
+    @if(weatherForecastInfo) {
+        <app-chart [weatherForecastInfo]="weatherForecastInfo"></app-chart>
+    } @else {
+        <app-skeleton></app-skeleton>
+    }
+</div>
