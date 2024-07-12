@@ -1,0 +1,38 @@
+@import "shared.scss";
+
+p {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.options {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .option {
+        border-top: 1px solid #5a5a5a;
+        border-bottom: 1px solid #5a5a5a;
+        padding: 5px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        transition: all .5s ease;
+        
+        &:hover {
+            background-color: #22222293;
+            transition: all .5s ease;
+        }
+
+        .badge {
+            background-color: #fff;
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+}

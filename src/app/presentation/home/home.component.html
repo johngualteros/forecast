@@ -1,0 +1,20 @@
+
+<h1>{{ greet }}</h1>
+
+<p>
+    Select the weather forecast option
+</p>
+
+<!-- searcher -->
+
+<div class="options">
+    @for (option of weatherForecastOptions; track $index) {
+        <div class="option">
+            {{ option.name }}
+
+            <p class="badge">
+                {{ option.acronym }}
+            </p>
+        </div>
+    }
+</div>
