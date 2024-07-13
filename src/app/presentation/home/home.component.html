@@ -6,9 +6,16 @@
 </p>
 
 <!-- searcher -->
+<div class="input-search">
+    <input 
+        type="text" 
+        placeholder="Search city" 
+        (input)="searchEventFn($event)"
+    >
+</div>
 
 <div class="options">
-    @for (option of weatherForecastOptions; track $index) {
+    @for (option of weatherForecastOptionsFiltered; track $index) {
         <div class="option" [routerLink]="['/weather', option.acronym]">
             {{ option.name }}
 

@@ -14,6 +14,15 @@ export class HomeComponent {
 
   public weatherForecastOptions: WeatherOption[] = ForecastUtils.getPossibleWeatherForecast();
 
+  public weatherForecastOptionsFiltered: WeatherOption[] = ForecastUtils.getPossibleWeatherForecast();
+
+  searchEventFn(searchEvent: any): void {
+    this.weatherForecastOptionsFiltered = this.weatherForecastOptions.filter((option: WeatherOption) => {
+      return option.name.toLowerCase().includes(searchEvent.target.value.toLowerCase())
+      || option.acronym.toLowerCase().includes(searchEvent.target.value.toLowerCase());
+    });
+  }
+
   public get greet(): string {
     return ForecastUtils.greetClient();
   }

@@ -25,10 +25,7 @@ export class WeatherComponent implements OnInit {
   ngOnInit() {
     this.weatherForecastService.getForecastInfo(this.acronym).subscribe((response: WeatherResponse) => {
       this.weatherForecastInfo = response;
-      console.log(this.weatherForecastInfo);
     });
-
-
   }
 
   public get name(): string {
