@@ -1,3 +1,10 @@
+### Run project
+Use Node Version 18, Angular 17
+
+```bash
+npm i && ng serve -o
+```
+
 # Forecast
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.3.
