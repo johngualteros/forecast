@@ -6,11 +6,13 @@ import { WeatherResponse } from '../../core/infrastructure/responses/weather-for
 import { ForecastUtils } from '../../core/domain/utils/forecast-utils';
 import { ChartComponent } from "./components/chart/chart.component";
 import { SkeletonComponent } from "../../shared/components/skeleton/skeleton.component";
+import { CommonModule } from '@angular/common';
+import { SwiperPeriodsComponent } from "./components/swiper-periods/swiper-periods.component";
 
 @Component({
   selector: 'app-weather',
   standalone: true,
-  imports: [ChartComponent, RouterModule, SkeletonComponent],
+  imports: [ChartComponent, RouterModule, SkeletonComponent, CommonModule, SwiperPeriodsComponent],
   templateUrl: './weather.component.html',
   styleUrl: './weather.component.scss'
 })

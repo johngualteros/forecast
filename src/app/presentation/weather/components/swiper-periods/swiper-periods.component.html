@@ -1,0 +1,55 @@
+<div class="weather-slider">
+    <swiper-container class="swiper-3" pagination="true" pagination-clickable="true" space-between="30"
+    slides-per-view="3">
+        @for (item of periods; track $index) {
+            <swiper-slide>
+                <div class="weather-time">{{ formatTime(item.startTime.toString()) }}</div>
+                <img [src]="item.icon" alt="{{ item.shortForecast }}" class="weather-icon">
+                <div class="weather-temp">
+                    <p>
+                        {{ item.temperature }}°{{ item.temperatureUnit }}
+                    </p>
+                    <p>
+                        {{ item.name }}
+                    </p>
+                </div>
+            </swiper-slide>
+        }
+    </swiper-container>
+
+    <swiper-container class="swiper-2" pagination="true" pagination-clickable="true" space-between="30"
+    slides-per-view="2">
+        @for (item of periods; track $index) {
+            <swiper-slide>
+                <div class="weather-time">{{ formatTime(item.startTime.toString()) }}</div>
+                <img [src]="item.icon" alt="{{ item.shortForecast }}" class="weather-icon">
+                <div class="weather-temp">
+                    <p>
+                        {{ item.temperature }}°{{ item.temperatureUnit }}
+                    </p>
+                    <p>
+                        {{ item.name }}
+                    </p>
+                </div>
+            </swiper-slide>
+        }
+    </swiper-container>
+
+    <swiper-container class="swiper-1" pagination="true" pagination-clickable="true" space-between="30"
+    slides-per-view="1">
+        @for (item of periods; track $index) {
+            <swiper-slide>
+                <div class="weather-time">{{ formatTime(item.startTime.toString()) }}</div>
+                <img [src]="item.icon" alt="{{ item.shortForecast }}" class="weather-icon">
+                <div class="weather-temp">
+                    <p>
+                        {{ item.temperature }}°{{ item.temperatureUnit }}
+                    </p>
+                    <p>
+                        {{ item.name }}
+                    </p>
+                </div>
+            </swiper-slide>
+        }
+    </swiper-container>
+</div>

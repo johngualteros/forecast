@@ -12,3 +12,15 @@
         <app-skeleton></app-skeleton>
     }
 </div>
+
+<!-- week info -->
+<p>
+    Week periods
+</p>
+
+@if(weatherForecastInfo) {
+    <app-swiper-periods [periods]="weatherForecastInfo.properties.periods"></app-swiper-periods>
+} @else {
+    <app-skeleton></app-skeleton>
+}
+
